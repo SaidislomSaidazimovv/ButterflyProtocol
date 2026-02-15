@@ -16,10 +16,10 @@ export default function NavLink({
   return (
     <Link
       href={href}
-      className={`text-sm font-medium transition-colors duration-200 ${
+      className={`text-[0.9rem] font-medium transition-colors duration-200 ${
         isActive
-          ? "text-neutral-900"
-          : "text-neutral-500 hover:text-neutral-800"
+          ? "text-text-main"
+          : "text-text-secondary hover:text-text-main"
       }`}
     >
       {children}

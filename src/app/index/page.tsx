@@ -34,10 +34,10 @@ export default function IndexPage() {
     <>
       <Section>
         <div className="mx-auto max-w-2xl">
-          <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
+          <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-tight text-text-main">
             Measure What Matters
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-neutral-500">
+          <p className="mt-6 text-xl leading-relaxed text-text-secondary">
             Emotional stability must become visible. The Butterfly Index tracks
             adoption, reach, and implementation across sectors — making progress
             measurable without compromising privacy.
@@ -45,14 +45,14 @@ export default function IndexPage() {
         </div>
       </Section>
 
-      <Section label="Domains" className="bg-neutral-50">
-        <div className="grid gap-8 sm:grid-cols-2 md:gap-10">
+      <Section label="Domains" className="bg-surface">
+        <div className="grid gap-8 sm:grid-cols-2">
           {metrics.map((m) => (
             <Card key={m.title}>
-              <h3 className="text-base font-semibold text-neutral-900">
+              <h3 className="text-base font-semibold text-text-main">
                 {m.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+              <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                 {m.description}
               </p>
             </Card>
@@ -62,10 +62,10 @@ export default function IndexPage() {
 
       <Section>
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-6 text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 className="mb-6 text-[clamp(2rem,4vw,3rem)] font-semibold text-text-main">
             Methodology
           </h2>
-          <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+          <div className="space-y-4 text-lg leading-relaxed text-text-secondary">
             <p>
               Built on the RE-AIM framework: Reach, Effectiveness, Adoption,
               Implementation, Maintenance. Year 1 metrics focus on Reach, Adoption,
@@ -78,7 +78,7 @@ export default function IndexPage() {
               the integrity of the Index.
             </p>
           </div>
-          <p className="mt-6 text-sm text-neutral-400">
+          <p className="mt-6 text-sm text-text-tertiary">
             Progress made measurable.
           </p>
         </div>

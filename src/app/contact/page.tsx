@@ -10,48 +10,48 @@ export default function ContactPage() {
     <>
       <Section>
         <div className="mx-auto max-w-lg text-center">
-          <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
+          <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-tight text-text-main">
             Contact
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-neutral-500">
+          <p className="mt-6 text-xl leading-relaxed text-text-secondary">
             For strategic inquiries, partnership discussions, and institutional
             engagement.
           </p>
         </div>
       </Section>
 
-      <Section className="bg-neutral-50">
+      <Section className="bg-surface">
         <div className="mx-auto max-w-lg">
           <div className="space-y-8 text-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+              <p className="font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
                 Location
               </p>
-              <p className="mt-2 text-lg text-neutral-700">
+              <p className="mt-2 text-lg text-text-secondary">
                 Geneva, Switzerland
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+              <p className="font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
                 General Inquiries
               </p>
-              <p className="mt-2 text-lg text-neutral-700">
+              <p className="mt-2 text-lg text-text-secondary">
                 info@butterfly.one
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+              <p className="font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
                 Strategic Partnerships
               </p>
-              <p className="mt-2 text-lg text-neutral-700">
+              <p className="mt-2 text-lg text-text-secondary">
                 partners@butterfly.one
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+              <p className="font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
                 Press
               </p>
-              <p className="mt-2 text-lg text-neutral-700">
+              <p className="mt-2 text-lg text-text-secondary">
                 press@butterfly.one
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="name"
-                className="mb-1.5 block text-sm font-medium text-neutral-700"
+                className="mb-1.5 block text-sm font-medium text-text-secondary"
               >
                 Name
               </label>
@@ -70,13 +70,13 @@ export default function ContactPage() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all duration-200 focus:border-neutral-400 focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
+                className="w-full rounded-lg border border-surface-border bg-white px-4 py-3 text-sm text-text-main outline-none transition-all duration-200 focus:border-text-tertiary focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="mb-1.5 block text-sm font-medium text-neutral-700"
+                className="mb-1.5 block text-sm font-medium text-text-secondary"
               >
                 Email
               </label>
@@ -84,20 +84,20 @@ export default function ContactPage() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all duration-200 focus:border-neutral-400 focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
+                className="w-full rounded-lg border border-surface-border bg-white px-4 py-3 text-sm text-text-main outline-none transition-all duration-200 focus:border-text-tertiary focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
               />
             </div>
             <div>
               <label
                 htmlFor="subject"
-                className="mb-1.5 block text-sm font-medium text-neutral-700"
+                className="mb-1.5 block text-sm font-medium text-text-secondary"
               >
                 Subject
               </label>
               <select
                 id="subject"
                 name="subject"
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all duration-200 focus:border-neutral-400 focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
+                className="w-full rounded-lg border border-surface-border bg-white px-4 py-3 text-sm text-text-main outline-none transition-all duration-200 focus:border-text-tertiary focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
               >
                 <option value="">Select an inquiry type</option>
                 <option value="partnership">Strategic Partnership</option>
@@ -109,7 +109,7 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="message"
-                className="mb-1.5 block text-sm font-medium text-neutral-700"
+                className="mb-1.5 block text-sm font-medium text-text-secondary"
               >
                 Message
               </label>
@@ -117,12 +117,12 @@ export default function ContactPage() {
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all duration-200 focus:border-neutral-400 focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
+                className="w-full rounded-lg border border-surface-border bg-white px-4 py-3 text-sm text-text-main outline-none transition-all duration-200 focus:border-text-tertiary focus:shadow-[0_0_0_3px_rgba(0,0,0,0.04)]"
               />
             </div>
             <button
               type="submit"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-neutral-900 px-6 text-sm font-medium text-white transition-all duration-200 hover:bg-neutral-800"
+              className="inline-flex items-center justify-center rounded-lg border border-text-main bg-text-main py-4 px-8 text-base font-semibold text-white transition-all duration-200 hover:bg-[#333]"
             >
               Send Inquiry
             </button>

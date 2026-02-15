@@ -1,41 +1,58 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import NavLink from "../ui/NavLink";
 
 const links = [
-  { href: "/framework", label: "Framework" },
-  { href: "/month", label: "Butterfly Month" },
-  { href: "/model", label: "Institutional Model" },
-  { href: "/accord", label: "The Accord" },
-  { href: "/index", label: "The Index" },
-  { href: "/contact", label: "Contact" },
+  { href: "#foundation", label: "The Foundation" },
+  { href: "#protocol", label: "The Protocol" },
+  { href: "#accord", label: "The Accord" },
+  { href: "#governance", label: "Governance" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-100 bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-10">
-        <Link href="/" className="text-base font-semibold tracking-tight text-neutral-900">
-          Butterfly Foundation
+    <header className="sticky top-0 z-1000 border-b border-surface-border bg-white/95 backdrop-blur-[10px]">
+      <div className="mx-auto flex h-16 max-w-300 items-center justify-between px-8">
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src="/Onetopia_Logo_Glowing2.png"
+            alt="Butterfly Foundation"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
+          <span className="text-[1.1rem] font-bold tracking-tight text-text-main">
+            Butterfly Foundation
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
-            <NavLink key={l.href} href={l.href}>
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-[0.9rem] font-medium text-text-secondary transition-colors duration-200 hover:text-text-main"
+            >
               {l.label}
-            </NavLink>
+            </a>
           ))}
+          <a
+            href="#governance"
+            className="inline-flex items-center justify-center rounded-lg border border-surface-border bg-white px-4 py-2 text-[0.85rem] font-semibold text-text-main transition-all duration-200 hover:border-text-main hover:bg-surface"
+          >
+            Partner Access
+          </a>
         </nav>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex h-9 w-9 items-center justify-center rounded-md text-neutral-600 hover:bg-neutral-50 lg:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-lg text-text-secondary hover:bg-surface lg:hidden"
           aria-label="Toggle menu"
         >
           <svg
@@ -57,13 +74,25 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="border-t border-neutral-100 bg-white px-6 pb-6 pt-4 lg:hidden">
+        <nav className="border-t border-surface-border bg-white px-8 pb-6 pt-4 lg:hidden">
           <div className="flex flex-col gap-4">
             {links.map((l) => (
-              <NavLink key={l.href} href={l.href}>
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="text-[0.9rem] font-medium text-text-secondary transition-colors duration-200 hover:text-text-main"
+              >
                 {l.label}
-              </NavLink>
+              </a>
             ))}
+            <a
+              href="#governance"
+              onClick={() => setOpen(false)}
+              className="inline-flex w-fit items-center justify-center rounded-lg border border-surface-border bg-white px-4 py-2 text-[0.85rem] font-semibold text-text-main transition-all duration-200 hover:border-text-main hover:bg-surface"
+            >
+              Partner Access
+            </a>
           </div>
         </nav>
       )}

@@ -13,10 +13,10 @@ export default function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`border-t border-neutral-100 py-24 md:py-28 ${className}`}>
+    <section id={id} className={`border-b border-surface-border py-24 ${className}`}>
       <Container>
         {label && (
-          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+          <p className="mb-4 font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
             {label}
           </p>
         )}
