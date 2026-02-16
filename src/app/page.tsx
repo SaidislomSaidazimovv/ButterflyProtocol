@@ -42,8 +42,7 @@ const deploymentTargets = [
   },
   {
     sector: "Education",
-    description:
-      "Campus-wide adoption from K\u201312 through higher education.",
+    description: "Campus-wide adoption from K\u201312 through higher education.",
   },
   {
     sector: "Government",
@@ -66,7 +65,6 @@ export default function Home() {
         className="bg-linear-to-b from-white to-[#fcfcfc] pt-32 pb-24"
       >
         <Container>
-          {/* OLD: mx-auto max-w-3xl text-center */}
           <div className="max-w-3xl text-left">
             <p className="mb-4 font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
               Protocol V1.0 &middot; Public Draft
@@ -82,7 +80,6 @@ export default function Home() {
               see you&rdquo; and &ldquo;Here is help.&rdquo;
             </p>
 
-            {/* OLD: justify-center */}
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-start">
               <Button href="#protocol">View the Specification</Button>
               <Button href="#accord" variant="secondary">
@@ -95,7 +92,8 @@ export default function Home() {
 
       {/* Section 1: The Missing Layer */}
       <Section id="foundation" label="THE MISSING LAYER">
-        <div className="mx-auto max-w-2xl">
+        {/* ✅ left aligned wrapper (no mx-auto) */}
+        <div className="max-w-2xl text-left">
           <h2 className="mb-6 text-[clamp(2rem,4vw,3rem)] font-semibold text-text-main">
             Intelligence is scaling. Stability is not.
           </h2>
@@ -116,12 +114,10 @@ export default function Home() {
 
       {/* Section 2: The Architecture */}
       <Section id="protocol" label="THE ARCHITECTURE" className="bg-surface">
-        {/* Rasmga o‘xshab title */}
         <h2 className="text-left text-[clamp(2.2rem,4.5vw,3.2rem)] font-semibold tracking-tight text-text-main">
           Four Steps. One Standard.
         </h2>
 
-        {/* 4 cards (02 active, qolganlari faded) */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, idx) => {
             const isActive = step.number === "02" || idx === 1;
@@ -131,14 +127,13 @@ export default function Home() {
               <Card
                 key={step.number}
                 className={[
-                  "rounded-2xl border bg-white p-8",
+                  "rounded-2xl border bg-white p-8 transition-all duration-300",
                   isActive
                     ? "border-zinc-400 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.45)]"
-                    : "border-surface-border shadow-sm",
+                    : "border-surface-border shadow-sm hover:border-[rgb(0,180,255)]",
                   isFaded ? "opacity-55" : "",
                 ].join(" ")}
               >
-                {/* Header: 01 chapda, o‘ngda name+subtitle */}
                 <div className="flex items-start justify-between">
                   <span
                     className={[
@@ -161,21 +156,19 @@ export default function Home() {
 
                 <div className="mt-6 h-px w-full bg-surface-border" />
 
-                {/* Body: rasmga o‘xshab bold prefix qo‘shamiz */}
                 <p className="mt-6 text-sm leading-relaxed text-text-secondary">
                   <span className="font-semibold text-text-main">
                     {step.number === "01"
                       ? "The Trigger:"
                       : step.number === "02"
-                        ? "The Action:"
-                        : step.number === "03"
-                          ? "The Handoff:"
-                          : "The Output:"}{" "}
+                      ? "The Action:"
+                      : step.number === "03"
+                      ? "The Handoff:"
+                      : "The Output:"}{" "}
                   </span>
                   {step.descriptor}
                 </p>
 
-                {/* Rasmda bor qo‘shimcha line-lar */}
                 {step.number === "02" ? (
                   <p className="mt-6 text-xs font-semibold tracking-wide text-text-main">
                     ↓ SEE FULL SCRIPT BELOW
@@ -205,8 +198,9 @@ export default function Home() {
           })}
         </div>
 
-        {/* THE 30-SECOND SCRIPT block (rasmda pastda) */}
-        <div className="mt-10">
+        {/* THE 30-SECOND SCRIPT block */}
+        {/* ✅ left aligned + consistent max width */}
+        <div className="mt-10 max-w-5xl">
           <div className="inline-flex items-center rounded-md bg-zinc-950 px-3 py-1 text-xs font-semibold tracking-wide text-white">
             THE 30-SECOND SCRIPT
           </div>
@@ -229,17 +223,15 @@ export default function Home() {
                 quote={`"What would help right now? I can stay with you, I can find someone, or I can share a resource. Whatever you need."`}
               />
 
-              <div className="">
-                <div className="flex gap-4">
-                  <div className="w-1 rounded-full bg-red-500" />
-                  <div>
-                    <div className="text-xs font-semibold tracking-wide text-red-600">
-                      IF IMMEDIATE CRISIS
-                    </div>
-                    <div className="mt-3 text-sm font-semibold leading-relaxed text-text-main">
-                      "I'm going to stay with you. We're going to call 988
-                      together right now."
-                    </div>
+              <div className="flex gap-4">
+                <div className="w-1 rounded-full bg-red-500" />
+                <div>
+                  <div className="text-xs font-semibold tracking-wide text-red-600">
+                    IF IMMEDIATE CRISIS
+                  </div>
+                  <div className="mt-3 text-sm font-semibold leading-relaxed text-text-main">
+                    "I'm going to stay with you. We're going to call 988
+                    together right now."
                   </div>
                 </div>
               </div>
@@ -248,10 +240,10 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Section 3: The Accord — Deployment */}
       {/* Section 3: The Deployment */}
       <Section id="accord" label="THE DEPLOYMENT">
-        <div className="mx-auto max-w-3xl text-left">
+        {/* ✅ left aligned wrapper (no mx-auto) */}
+        <div className="max-w-3xl text-left">
           <h2 className="mb-6 text-[clamp(2rem,4vw,3rem)] font-semibold text-text-main">
             Institutional Integration.
           </h2>
@@ -262,9 +254,9 @@ export default function Home() {
         </div>
 
         {/* Grid */}
-        <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Corporate */}
-          <Card className="rounded-2xl border border-surface-border bg-white p-6">
+        {/* ✅ left aligned grid (no mx-auto) */}
+        <div className="mt-12 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Card className="rounded-2xl border border-surface-border bg-white p-6 transition-all duration-300 hover:border-[rgb(0,180,255)]">
             <div className="text-xs font-mono uppercase tracking-widest text-text-tertiary">
               Corporate
             </div>
@@ -277,8 +269,7 @@ export default function Home() {
             </p>
           </Card>
 
-          {/* Education */}
-          <Card className="rounded-2xl border border-surface-border bg-white p-6">
+          <Card className="rounded-2xl border border-surface-border bg-white p-6 transition-all duration-300 hover:border-[rgb(0,180,255)]">
             <div className="text-xs font-mono uppercase tracking-widest text-text-tertiary">
               Education
             </div>
@@ -291,8 +282,7 @@ export default function Home() {
             </p>
           </Card>
 
-          {/* Municipal */}
-          <Card className="rounded-2xl border border-surface-border bg-white p-6">
+          <Card className="rounded-2xl border border-surface-border bg-white p-6 transition-all duration-300 hover:border-[rgb(0,180,255)]">
             <div className="text-xs font-mono uppercase tracking-widest text-text-tertiary">
               Municipal
             </div>
@@ -305,7 +295,6 @@ export default function Home() {
             </p>
           </Card>
 
-          {/* Metric */}
           <Card className="rounded-2xl border border-zinc-900 bg-zinc-950 p-6">
             <div className="text-xs font-mono uppercase tracking-widest text-zinc-400">
               Metric
@@ -323,7 +312,8 @@ export default function Home() {
 
       {/* Section 4: Governance */}
       <Section id="governance" className="bg-surface">
-        <div className="mx-auto max-w-2xl text-center">
+        {/* ✅ left aligned (was text-center) */}
+        <div className="max-w-2xl text-left">
           <p className="mb-4 font-mono text-[0.85rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
             Governance
           </p>
