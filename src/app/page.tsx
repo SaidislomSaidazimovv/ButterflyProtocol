@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Section 1: The Missing Layer */}
-      <Section id="foundation" label="The Foundation">
+      <Section id="foundation" label="THE MISSING LAYER">
         <div className="mx-auto max-w-2xl">
           <h2 className="mb-6 text-[clamp(2rem,4vw,3rem)] font-semibold text-text-main">
             Intelligence is scaling. Stability is not.
@@ -115,7 +115,7 @@ export default function Home() {
       </Section>
 
       {/* Section 2: The Architecture */}
-      <Section id="protocol" label="The Protocol" className="bg-surface">
+      <Section id="protocol" label="THE ARCHITECTURE" className="bg-surface">
         {/* Rasmga o‘xshab title */}
         <h2 className="text-left text-[clamp(2.2rem,4.5vw,3.2rem)] font-semibold tracking-tight text-text-main">
           Four Steps. One Standard.
@@ -229,7 +229,7 @@ export default function Home() {
                 quote={`"What would help right now? I can stay with you, I can find someone, or I can share a resource. Whatever you need."`}
               />
 
-              <div className="rounded-xl border border-surface-border bg-zinc-50 p-6">
+              <div className="">
                 <div className="flex gap-4">
                   <div className="w-1 rounded-full bg-red-500" />
                   <div>
@@ -249,36 +249,75 @@ export default function Home() {
       </Section>
 
       {/* Section 3: The Accord — Deployment */}
-      <Section id="accord" label="The Accord">
-        <div className="mx-auto max-w-2xl">
+      {/* Section 3: The Deployment */}
+      <Section id="accord" label="THE DEPLOYMENT">
+        <div className="mx-auto max-w-3xl text-left">
           <h2 className="mb-6 text-[clamp(2rem,4vw,3rem)] font-semibold text-text-main">
-            Commitment at Scale
+            Institutional Integration.
           </h2>
-          <div className="space-y-4 text-lg leading-relaxed text-text-secondary">
-            <p>
-              The Butterfly Accord aligns Governments. Corporations.
-              Institutions.
-            </p>
-            <p>
-              Emotional Sustainability becomes measurable. Accountable.
-              Integrated.
-            </p>
-            <p className="font-medium text-text-main">
-              Not a pledge. A framework.
-            </p>
-          </div>
+          <p className="text-lg leading-relaxed text-text-secondary">
+            The protocol is designed to embed directly into existing systems —
+            not as an initiative, but as infrastructure.
+          </p>
         </div>
-        <div className="mx-auto mt-12 grid max-w-4xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {deploymentTargets.map((target) => (
-            <Card key={target.sector}>
-              <h3 className="text-[1.1rem] font-semibold text-text-main">
-                {target.sector}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                {target.description}
-              </p>
-            </Card>
-          ))}
+
+        {/* Grid */}
+        <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Corporate */}
+          <Card className="rounded-2xl border border-surface-border bg-white p-6">
+            <div className="text-xs font-mono uppercase tracking-widest text-text-tertiary">
+              Corporate
+            </div>
+            <h3 className="mt-3 text-lg font-semibold text-text-main">
+              ESG Reporting Metric
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              Integrated into the Social Pillar as a measurable indicator of
+              employee emotional resilience and response readiness.
+            </p>
+          </Card>
+
+          {/* Education */}
+          <Card className="rounded-2xl border border-surface-border bg-white p-6">
+            <div className="text-xs font-mono uppercase tracking-widest text-text-tertiary">
+              Education
+            </div>
+            <h3 className="mt-3 text-lg font-semibold text-text-main">
+              District-wide Safety Standard
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              A unified, age-appropriate protocol adopted across K–12 and higher
+              education systems.
+            </p>
+          </Card>
+
+          {/* Municipal */}
+          <Card className="rounded-2xl border border-surface-border bg-white p-6">
+            <div className="text-xs font-mono uppercase tracking-widest text-text-tertiary">
+              Municipal
+            </div>
+            <h3 className="mt-3 text-lg font-semibold text-text-main">
+              Civic Resilience Layer
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              Embedded into public health, transit, and emergency response
+              frameworks at the city level.
+            </p>
+          </Card>
+
+          {/* Metric */}
+          <Card className="rounded-2xl border border-zinc-900 bg-zinc-950 p-6">
+            <div className="text-xs font-mono uppercase tracking-widest text-zinc-400">
+              Metric
+            </div>
+            <h3 className="mt-3 text-lg font-semibold text-white">
+              Open by Design
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-zinc-300">
+              100% open source. Zero IP friction. Publicly auditable outcomes
+              proving effectiveness at scale.
+            </p>
+          </Card>
         </div>
       </Section>
 

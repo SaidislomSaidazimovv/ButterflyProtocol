@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   },
   description:
     "Building the global infrastructure for emotional sustainability and regeneration.",
+    icons: {
+    icon: "/Onetopia_Logo_Glowing2.png",
+  },
 };
 
 export default function RootLayout({
@@ -40,3 +43,4 @@ export default function RootLayout({
     </html>
   );
 }
+
